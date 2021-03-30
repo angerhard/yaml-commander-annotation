@@ -29,6 +29,9 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
+      - name: Show maven xml
+        run: cat ~/.m2/settings.xml
+
       - name: Build event hub source
         run: mvn -B package --file pom.xml
 
