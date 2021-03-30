@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: maven-settings-xml-action
+        uses: whelk-io/maven-settings-xml-action@v14
+        with:
+          servers: '[{ "id": "github", "username": "angerhard", "password": "${{ secret.MAVEN_REPOSITORY_SECRET }}" }]'
+
+
       - uses: actions/checkout@v2
       - name: Set up JDK 11
         uses: actions/setup-java@v1
@@ -27,6 +33,6 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Publish event hub source
-        run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+        run: mvn deploy
         env:
           GITHUB_TOKEN: ${{ github.token }}
