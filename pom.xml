@@ -17,12 +17,12 @@
         <repository>
             <id>github</id>
             <name>GitHub AnGerhard repo</name>
-            <url>https://maven.pkg.github.com/angerhard/yaml-commander-annotation</url>
+            <url>https://maven.pkg.github.com/angerhard/maven-repository</url>
         </repository>
         <snapshotRepository>
             <id>github</id>
             <name>GitHub AnGerhard repo</name>
-            <url>https://maven.pkg.github.com/angerhard/yaml-commander-annotation</url>
+            <url>https://maven.pkg.github.com/angerhard/maven-repository</url>
         </snapshotRepository>
     </distributionManagement>
 

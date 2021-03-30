@@ -13,7 +13,7 @@ jobs:
       - name: maven-settings-xml-action
         uses: whelk-io/maven-settings-xml-action@v14
         with:
-          servers: '[{ "id": "github", "username": "angerhard", "password": "${{ secret.MAVEN_REPOSITORY_SECRET }}" }]'
+          servers: '[{ "id": "github", "username": "angerhard", "password": "${{ secrets.MAVEN_REPOSITORY_SECRET }}" }]'
 
 
       - uses: actions/checkout@v2
